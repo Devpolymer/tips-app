@@ -1,0 +1,35 @@
+
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<dom-module id="tip-app">
+<style is="custom-style">	
+</style>
+<template>	
+</template>
+<script type="text/javascript">
+	Polymer({
+		is: 'tip-app',
+		properties: {
+		},
+		ready: function () {	
+       	},
+       	attached: function() {
+       		var config = {
+       			apiKey: "AIzaSyDz1aysL6QGZklPRakbwY0LAelkXXW4efA",
+			    authDomain: "vicalbase.firebaseapp.com",
+			    databaseURL: "https://vicalbase.firebaseio.com",
+			    storageBucket: "vicalbase.appspot.com",
+			   	messagingSenderId: "275325129304"
+			};
+		  	firebase.initializeApp(config);
+		  	this.guardarDatos(firebase.database());
+	    },
+	    guardarDatos: function(dataBase) {
+	    	dataBase.ref('usuario/').set({
+			    nombre: 'Victor',
+			    email: 'vical.rl@gmail.com',
+			    imagen : 'icono'
+		  	});
+	    },
+	});
+</script>
+</dom-module>
