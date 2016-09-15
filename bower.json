@@ -1,0 +1,20 @@
+{
+  "name": "tip-app",
+  "authors": [
+    "darkvical <vical.rl@gmail.com>"
+  ],
+  "description": "Aplicacion sobre tips",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.6.1"
+  }
+}
