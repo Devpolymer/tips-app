@@ -9,6 +9,7 @@
 	Polymer({
 		is: 'tip-app',
 		properties: {
+			database: Object,
 		},
 		ready: function () {	
        	},
@@ -21,14 +22,21 @@
 			   	messagingSenderId: "275325129304"
 			};
 		  	firebase.initializeApp(config);
-		  	this.guardarDatos(firebase.database());
+		  	this.database = firebase.database();
+		  	this.guardarDatos();
+		  	this.listarTip();
 	    },
-	    guardarDatos: function(dataBase) {
-	    	dataBase.ref('usuario/').set({
+	    guardarDatos: function() {
+	    	this.database.ref('usuario/').set({
 			    nombre: 'Victor',
 			    email: 'vical.rl@gmail.com',
-			    imagen : 'icono'
+			    imagen : 'icono3'
 		  	});
+	    },
+	    listarTip: function() {
+	    	this.database.ref('tips').on('value', function(snapshot) {
+	    		console.log(snapshot.val());
+			});
 	    },
 	});
 </script>
