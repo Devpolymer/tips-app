@@ -1,0 +1,22 @@
+{
+  "name": "tip-app",
+  "version": "1.0.0",
+  "description": "aplicacion tip",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devpolymer/tips-app.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "vical",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devpolymer/tips-app/issues"
+  },
+  "homepage": "https://github.com/Devpolymer/tips-app#readme"
+}
